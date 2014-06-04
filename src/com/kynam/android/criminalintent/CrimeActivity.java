@@ -30,10 +30,10 @@ public class CrimeActivity extends FragmentActivity {
 			.commit();
 		}
 
-		if (savedInstanceState == null) {
+		/*if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
 					.add(R.id.fragmentContainer, new PlaceholderFragment()).commit();
-		}
+		}*/
 	}
 
 /*	@Override
