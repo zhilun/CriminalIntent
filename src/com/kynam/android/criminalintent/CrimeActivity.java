@@ -13,12 +13,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
 
-public class CrimeActivity extends FragmentActivity {
-
+public class CrimeActivity extends SingleFragmentActivity {
+	
 	@Override
+	protected Fragment createFragment() {
+		return new CrimeFragment();
+	}
+
+	/*@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_crime);
+		setContentView(R.layout.activity_fragment);
 		
 		FragmentManager fm = getSupportFragmentManager();
 		Fragment fragment = fm.findFragmentById(R.id.fragmentContainer);
@@ -30,11 +35,11 @@ public class CrimeActivity extends FragmentActivity {
 			.commit();
 		}
 
-		/*if (savedInstanceState == null) {
+		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
 					.add(R.id.fragmentContainer, new PlaceholderFragment()).commit();
-		}*/
-	}
+		}
+	}*/
 
 /*	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
