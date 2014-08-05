@@ -28,6 +28,7 @@ public class CrimeFragment extends Fragment {
 	
 	public static final String EXTRA_CRIME_ID = "com.kynam.android.criminalintent.crime_id";
 	private static final String DIALOG_DATE = "date";
+	private static final String DIALOG_TIME = "time";
 	
 	private static final int REQUEST_DATE = 0;
 	
@@ -97,10 +98,12 @@ public class CrimeFragment extends Fragment {
 				// TODO Auto-generated method stub
 				FragmentManager fm = getActivity()
 						.getSupportFragmentManager();
-				DatePickerFragment dialog = DatePickerFragment
-						.newInstance(mCrime.getDate());
+				/*DatePickerFragment dialog = DatePickerFragment
+						.newInstance(mCrime.getDate());*/
+				TimePickerFragment dialog = new TimePickerFragment();
+				
 				dialog.setTargetFragment(CrimeFragment.this, REQUEST_DATE);
-				dialog.show(fm, DIALOG_DATE);
+				dialog.show(fm, DIALOG_TIME);
 				
 			}
 		});
